@@ -1,9 +1,32 @@
 @use "components";
+@mixin title-3 {
+    font-family: components.$font-titles;
+    font-size: 2rem;
+    font-weight: bold;    
+}
+@mixin title-4 {
+    font-family: components.$font-titles;
+    font-size: 0.8rem;
+    font-weight: bold;    
+}
+@mixin text-mini {
+    font-family: components.$font-titles;
+    font-size: 0.8rem;     
+    font-weight: 400;
+}
+@mixin subtitles {
+    font-family: components.$font-titles;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #bababa;
+}
+$color-title-2: #212529;
+$color-p: #444141;
 body{
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
+
 header{
     border-bottom: 1px solid #e0e0e0;
     height: 3.5rem;
@@ -47,6 +70,7 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
+    border-bottom: 1px solid #e0e0e0;
 }
 .flex-home{
     display: flex;
@@ -60,15 +84,15 @@ section{
             color: components.$color-main;
             font-weight: bold;
         }
-        h1{
+        h2{
             font-family: components.$font-titles;
-            color: black;
+            color: $color-title-2;
             font-size: 3.85rem;
             font-weight: 500;
             line-height: 4.25rem;
          }
-         h1+p{
-            color: black;
+         h2+p{
+            color: $color-title-2;
             font-weight: bold;
          }
     }
@@ -87,4 +111,45 @@ section{
         }
 
     }    
+}
+.features{
+    .intro{
+        text-align: center; 
+        h3{
+            @include title-3();
+            padding: 2% 0 0 0;
+        } 
+        p{
+            @include subtitles();
+        }      
+    }
+    .feature-description{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        .text-feature{
+            flex: 0 1 20rem;
+            ul{
+                list-style: none;
+                display: inline;
+                li{
+                    display: flex;
+                    gap: 3%;
+                    .text-feature-title{
+                        @include title-4();
+                        color: $color-title-2;
+                    }
+                    p{
+                        @include text-mini();
+                        color: $color-p;
+                    }
+                }
+            }
+        }
+        .image-feature{}
+    }
+}
+.benefits{
+    @extend .benefits.intro;
 }

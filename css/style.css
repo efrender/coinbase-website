@@ -1,184 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@800&display=swap");
-.btn-main, .btn-main-s {
-  width: 8.19rem;
-  height: 2.32rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #0075FF;
-  color: white;
-}
-.btn-main-s {
-  font-size: 0.75rem;
-  padding: 0.1rem 1rem;
-  height: 1.72rem;
-}
+/* Error: compound selectors may no longer be extended.
+ * Consider `@extend .benefits, .intro` instead.
+ * See http://bit.ly/ExtendCompound for details.
+ * 
+ *     ,
+ * 154 |     @extend .benefits.intro;
+ *     |             ^^^^^^^^^^^^^^^
+ *     '
+ *   sass\_globals.scss 154:13  root stylesheet */
 
-.btn-sec {
-  width: 8.19rem;
-  height: 2.32rem;
-  border: none;
-  border-radius: 4px;
-  background-color: transparent;
-  color: black;
-  font-weight: 500;
-  transition: 0.8s;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: compound selectors may no longer be extended.\a Consider `@extend .benefits, .intro` instead.\aSee http://bit.ly/ExtendCompound for details.\a\a     \2577 \a 154 \2502      @extend .benefits.intro;\d\a     \2502              ^^^^^^^^^^^^^^^\a     \2575 \a   sass\\_globals.scss 154:13  root stylesheet";
 }
-.btn-sec:hover {
-  color: #0075FF;
-}
-
-.icon-sm {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.icon-sm i {
-  border-radius: 50%;
-  color: #0075FF;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  font-size: 0.75rem;
-}
-
-.feature {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  margin-bottom: 2rem;
-}
-.feature .icon {
-  color: #0075FF;
-  font-size: 5rem;
-}
-.feature .description {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.feature .description h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.5625rem;
-  font-weight: bold;
-  color: black;
-  line-height: 1.18rem;
-  margin-bottom: 1rem;
-}
-.feature .description p {
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  font-size: 0.9rem;
-}
-.feature .cta {
-  color: #0075FF;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.icon-desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.icon-desc .icon {
-  font-size: 5rem;
-  color: #0075FF;
-  margin-bottom: 1rem;
-}
-.icon-desc h3 {
-  font-weight: bold;
-  color: black;
-  font-size: 1rem;
-  margin-top: -3%;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-header {
-  border-bottom: 1px solid #e0e0e0;
-  height: 3.5rem;
-}
-header .container .flex-contain {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1%;
-}
-header .container .flex-contain .logo {
-  width: 7rem;
-  height: 1.2rem;
-}
-header .container .flex-contain .nav-menu {
-  display: flex;
-}
-header .container .flex-contain .nav-menu .main-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 0;
-}
-header .container .flex-contain .nav-menu .main-menu li {
-  list-style: none;
-}
-header .container .flex-contain .nav-menu .main-menu li a {
-  color: black;
-  font-size: 0.875rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 1s;
-}
-header .container .flex-contain .nav-menu .main-menu li a:hover {
-  color: #0075FF;
-  text-decoration: underline;
-}
-
-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.flex-home {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-}
-.flex-home .home-cta {
-  width: 26rem;
-}
-.flex-home .home-cta p, .flex-home .home-cta i {
-  display: inline;
-  color: #0075FF;
-  font-weight: bold;
-}
-.flex-home .home-cta h1 {
-  font-family: "Inter", sans-serif;
-  color: black;
-  font-size: 3.85rem;
-  font-weight: 500;
-  line-height: 4.25rem;
-}
-.flex-home .home-cta h1 + p {
-  color: black;
-  font-weight: bold;
-}
-.flex-home .form {
-  margin-top: 5%;
-}
-.flex-home .form input[type=email] {
-  width: 16.75rem;
-  border-radius: 5px;
-  border: 1px solid rgba(61, 60, 60, 0.3);
-  transition: 0.5s ease-in;
-  padding: 1.4% 0;
-}
-.flex-home .form input[type=email]:hover {
-  border: 1px solid #0075FF;
-  box-shadow: 0 0 10px #4a95ecbb;
-}
-
-/*# sourceMappingURL=style.css.map */
