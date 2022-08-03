@@ -151,5 +151,5 @@ section{
     }
 }
 .benefits{
-    @extend .benefits.intro;
+    @extend .benefits,.intro;
 }
