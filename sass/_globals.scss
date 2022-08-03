@@ -151,5 +151,11 @@ section{
     }
 }
 .benefits{
-    @extend .benefits,.intro;
+    @extend .features, .intro;
+    .card-benefits{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }

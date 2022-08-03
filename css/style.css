@@ -40,23 +40,23 @@
   color: #0075FF;
 }
 
-.feature {
+.benefits {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20rem;
   margin-bottom: 2rem;
 }
-.feature .icon {
+.benefits .icon {
   color: #0075FF;
   font-size: 5rem;
 }
-.feature .description {
+.benefits .description {
   text-align: center;
   margin-bottom: 2rem;
+  flex: 0 1 25%;
 }
-.feature .description h3 {
+.benefits .description h3 {
   font-family: "Inter", sans-serif;
   font-size: 1.5625rem;
   font-weight: bold;
@@ -64,12 +64,12 @@
   line-height: 1.18rem;
   margin-bottom: 1rem;
 }
-.feature .description p {
+.benefits .description p {
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-size: 0.9rem;
 }
-.feature .cta {
+.benefits .description .cta {
   color: #0075FF;
   text-align: center;
   font-size: 0.9rem;
@@ -183,49 +183,55 @@ section {
   box-shadow: 0 0 10px #4a95ecbb;
 }
 
-.features .intro, .features .benefits {
+.features .intro, .features .benefits, .benefits .intro, .benefits .benefits {
   text-align: center;
 }
-.features .intro h3, .features .benefits h3 {
+.features .intro h3, .features .benefits h3, .benefits .intro h3, .benefits .benefits h3 {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   padding: 2% 0 0 0;
 }
-.features .intro p, .features .benefits p {
+.features .intro p, .features .benefits p, .benefits .intro p, .benefits .benefits p {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: #bababa;
 }
-.features .feature-description {
+.features .feature-description, .benefits .feature-description {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-.features .feature-description .text-feature {
+.features .feature-description .text-feature, .benefits .feature-description .text-feature {
   flex: 0 1 20rem;
 }
-.features .feature-description .text-feature ul {
+.features .feature-description .text-feature ul, .benefits .feature-description .text-feature ul {
   list-style: none;
   display: inline;
 }
-.features .feature-description .text-feature ul li {
+.features .feature-description .text-feature ul li, .benefits .feature-description .text-feature ul li {
   display: flex;
   gap: 3%;
 }
-.features .feature-description .text-feature ul li .text-feature-title {
+.features .feature-description .text-feature ul li .text-feature-title, .benefits .feature-description .text-feature ul li .text-feature-title {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
   color: #212529;
 }
-.features .feature-description .text-feature ul li p {
+.features .feature-description .text-feature ul li p, .benefits .feature-description .text-feature ul li p {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   color: #444141;
+}
+.benefits .card-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -49,12 +49,11 @@ $blac10: rgba(0, 0, 0, 1);
 }
 
 
-.feature{
+.benefits{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20rem;
     margin-bottom: 2rem;
     .icon{
         color:$color-main;
@@ -63,6 +62,7 @@ $blac10: rgba(0, 0, 0, 1);
     .description{
         text-align: center;
         margin-bottom: 2rem;
+        flex: 0 1 25%;
         h3{
             font-family: $font-titles;
             font-size: 1.5625rem;
@@ -76,12 +76,13 @@ $blac10: rgba(0, 0, 0, 1);
             text-align: center;
             font-size: 0.9rem;
         }
+        .cta{
+            color: $color-main;
+            text-align: center;
+            font-size: 0.9rem;
+        }
     }
-    .cta{
-        color: $color-main;
-        text-align: center;
-        font-size: 0.9rem;
-    }
+
 }
 .icon-desc{
     display: flex;
