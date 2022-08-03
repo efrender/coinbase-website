@@ -1,4 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@800&display=swap');
+
+$font-titles : 'Inter', sans-serif;
 $color-main: #0075FF;
+$black60: rgba(0, 0, 0, 0.6);
+$blac10: rgba(0, 0, 0, 1);
+
+@mixin btn-base{
+    width: 8.19rem;
+    height: 2.32rem;
+    border: none;
+    border-radius: 4px;
+}
+
 .btn-main{
+    @include btn-base();
     background-color: $color-main;
+    color: white;  
+
+    &-s{
+        @extend .btn-main;
+        font-size: 0.75rem;
+        padding: 0.1rem 1rem;
+        height: 1.72rem;
+    }
+}
+.btn-sec{
+    @include btn-base();
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    transition: 0.8s;
+    &:hover{
+        color: $color-main;
+    }  
+}
+.icon-sm{
+    width: 2.5rem;
+    height: 2.5rem;
+    i{
+        border-radius: 50%;
+        color: $color-main;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        font-size: 0.75rem;
+    }
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    margin-bottom: 2rem;
+    .icon{
+        color:$color-main;
+        font-size: 5rem;
+    }
+    .description{
+        text-align: center;
+        margin-bottom: 2rem;
+        h3{
+            font-family: $font-titles;
+            font-size: 1.5625rem;
+            font-weight: bold;
+            color: black;
+            line-height: 1.18rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $black60;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    }
+    .cta{
+        color: $color-main;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+.icon-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .icon{
+        font-size: 5rem;
+        color: $color-main;
+        margin-bottom: 1rem ;
+    }  
+    h3{
+        font-weight: bold;
+        color: $blac10;
+        font-size: 1rem;
+        margin-top: -3%;
+    }
 }
