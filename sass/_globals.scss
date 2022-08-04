@@ -147,15 +147,64 @@ section{
                 }
             }
         }
-        .image-feature{}
+        .image-feature{
+            width: 100;
+        }
     }
 }
 .benefits{
+    border: none;
     @extend .features, .intro;
     .card-benefits{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+    }
+}
+.kpi{
+    background-color: components.$color-main;
+    padding: 1% 0;
+    height: auto;
+    .kpi-text{
+        color: white;
+        text-align: center;
+        padding: 0 7%;
+        .kpi-numbers{
+            span{
+                font-size: 3rem;
+                font-weight: 600;
+            }
+            p{
+    
+            }
+        }
+    }
+}
+.onboarding{
+    @extend .features, .intro;
+    text-align: center;
+    .onboarding-icons{
+        display: flex;
+        justify-content: space-around;
         align-items: center;
+        margin-top: 5%;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 5%;
+        .get-start-icons{
+            i{
+                color: components.$color-main;
+                font-size: 5rem;
+                line-height: 1rem;
+            }
+            h4{
+                font-size: 1rem;
+                color: $color-title-2;
+                font-weight: bold;
+            }
+        }
+        hr{
+            width: 15%;
+        }
     }
 }
