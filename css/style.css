@@ -20,7 +20,7 @@
   border-radius: 4px;
   background-color: transparent;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.8s;
 }
 .btn-sec:hover {
@@ -127,7 +127,7 @@ header .container .flex-contain .nav-menu .main-menu li {
   list-style: none;
 }
 header .container .flex-contain .nav-menu .main-menu li a {
-  color: black;
+  color: #212529;
   font-size: 0.875rem;
   font-weight: bold;
   text-decoration: none;
@@ -141,7 +141,6 @@ header .container .flex-contain .nav-menu .main-menu li a:hover {
 section {
   position: relative;
   width: 100%;
-  height: 100vh;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -149,6 +148,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: 100vh;
 }
 .flex-home .home-cta {
@@ -162,7 +162,8 @@ section {
 .flex-home .home-cta h2 {
   font-family: "Inter", sans-serif;
   color: #212529;
-  font-size: 3.85rem;
+  font-size: 2.8rem;
+  font-size: clamp(2.8rem, 2.59rem + 1.0500000000000003vw, 3.85rem);
   font-weight: 500;
   line-height: 4.25rem;
 }
@@ -229,11 +230,13 @@ section {
   font-weight: 400;
   color: #444141;
 }
-.features .feature-description .image-feature, .onboarding .feature-description .image-feature, .benefits .feature-description .image-feature {
-  width: 100;
+.features .feature-description .image-feature img, .onboarding .feature-description .image-feature img, .benefits .feature-description .image-feature img {
+  max-width: 100%;
 }
 
 .benefits {
+  height: auto;
+  padding: 3% 0 8% 0;
   border: none;
 }
 .benefits .card-benefits {
@@ -257,6 +260,8 @@ section {
   font-weight: 600;
 }
 .onboarding {
+  height: auto;
+  padding: 5% 0;
   text-align: center;
 }
 .onboarding .onboarding-icons {
@@ -280,6 +285,44 @@ section {
 }
 .onboarding .onboarding-icons hr {
   width: 15%;
+}
+
+footer {
+  background-color: #f5f8ff;
+}
+footer .flex-footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .flex-footer .text-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 60%;
+  text-align: left;
+  padding-left: 15%;
+}
+footer .flex-footer .text-footer .texts {
+  width: 67%;
+}
+footer .flex-footer .text-footer .texts h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+footer .flex-footer .text-footer .texts p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #bababa;
+}
+footer .flex-footer .img-footer {
+  flex: 0 1 40%;
+}
+footer .flex-footer .img-footer img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

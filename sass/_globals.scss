@@ -22,6 +22,7 @@
 }
 $color-title-2: #212529;
 $color-p: #444141;
+$footer-color: #f5f8ff;
 body{
     padding: 0;
     margin: 0;
@@ -50,7 +51,7 @@ header{
                         li{
                             list-style: none;
                             a{
-                                color: black;
+                                color: #212529;
                                 font-size: 0.875rem;
                                 font-weight: bold;
                                 text-decoration: none;
@@ -69,13 +70,13 @@ header{
 section{
     position: relative;
     width: 100%;
-    height: 100vh;
     border-bottom: 1px solid #e0e0e0;
 }
 .flex-home{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     height: 100vh;
     .home-cta{
         width: 26rem;
@@ -87,7 +88,8 @@ section{
         h2{
             font-family: components.$font-titles;
             color: $color-title-2;
-            font-size: 3.85rem;
+            font-size: 2.8rem;
+            font-size: clamp(2.8rem, 2.59rem + 1.0500000000000003vw, 3.85rem);
             font-weight: 500;
             line-height: 4.25rem;
          }
@@ -148,11 +150,15 @@ section{
             }
         }
         .image-feature{
-            width: 100;
+            img{
+                max-width: 100%;
+            }
         }
     }
 }
 .benefits{
+    height: auto;
+    padding: 3% 0 8% 0;
     border: none;
     @extend .features, .intro;
     .card-benefits{
@@ -182,6 +188,8 @@ section{
 }
 .onboarding{
     @extend .features, .intro;
+    height: auto;
+    padding: 5% 0;
     text-align: center;
     .onboarding-icons{
         display: flex;
@@ -205,6 +213,38 @@ section{
         }
         hr{
             width: 15%;
+        }
+    }
+}
+footer{
+    background-color: $footer-color;
+    .flex-footer{
+        position: relative;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .text-footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 0 1 60%;
+            text-align: left;
+            padding-left: 15%;
+            .texts{
+                width: 67%;
+                h3{
+                    @include title-3();
+                }
+                p{
+                    @include subtitles();
+                }
+            }
+        }
+        .img-footer{
+            flex: 0 1 40%;
+            img{
+                width: 100%;
+            }
         }
     }
 }
