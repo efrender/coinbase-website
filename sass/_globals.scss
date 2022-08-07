@@ -40,6 +40,9 @@ header{
                 width: 7rem;
                 height: 1.20rem;
             }
+            .login span{
+                display: none;
+            }
             .nav-menu{
                 display: flex;
                 .toggle{
@@ -64,6 +67,9 @@ header{
                                     color:components.$color-main;
                                     text-decoration: underline;
                                 }
+                            }
+                            button{
+                                display: none;
                             }
                         }       
                 }
@@ -260,6 +266,14 @@ footer{
     header{
         .container{
             .flex-contain{
+                padding: 0;
+                align-items: center;
+                .logo img{
+                    width: 100%;
+                }
+                .login{
+                    display: none;
+                }
                 .nav-menu {
                     order: 3;
                     --open: inline-block;
@@ -301,6 +315,9 @@ footer{
                             color: white;
                             font-size: 1.5rem;
                         }
+                        li button{
+                            display: inline;
+                        }
                     }
                 } 
             } 
@@ -316,8 +333,8 @@ footer{
     }
     .flex-home{
         .home-cta{
-            background: #8080803b;
-            padding: 10% 0;
+            background: #0075ff24;
+            padding: 10% 5%;
         }
         .home-cta h2 {
             line-height: 3rem;

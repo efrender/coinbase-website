@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@800&display=swap");
-.btn-main, .btn-main-s {
+.btn-main, .btn-main-toggle, .btn-main-s {
   width: 8.19rem;
   height: 2.32rem;
   border: none;
@@ -13,7 +13,11 @@
   height: 1.72rem;
 }
 
-.btn-sec {
+.btn-main-toggle {
+  background-color: cornflowerblue;
+}
+
+.btn-sec, .btn-sec-toggle {
   width: 8.19rem;
   height: 2.32rem;
   border: none;
@@ -23,8 +27,12 @@
   font-weight: 600;
   transition: 0.8s;
 }
-.btn-sec:hover {
+.btn-sec:hover, .btn-sec-toggle:hover {
   color: #0075FF;
+}
+
+.btn-sec-toggle {
+  background-color: forestgreen;
 }
 
 .icon-sm {
@@ -113,6 +121,9 @@ header .container .flex-contain .logo {
   width: 7rem;
   height: 1.2rem;
 }
+header .container .flex-contain .login span {
+  display: none;
+}
 header .container .flex-contain .nav-menu {
   display: flex;
 }
@@ -140,6 +151,9 @@ header .container .flex-contain .nav-menu .main-menu li a {
 header .container .flex-contain .nav-menu .main-menu li a:hover {
   color: #0075FF;
   text-decoration: underline;
+}
+header .container .flex-contain .nav-menu .main-menu li button {
+  display: none;
 }
 
 section {
@@ -333,6 +347,16 @@ footer .flex-footer .img-footer img {
 
 @media (max-width: 768px) {
   /*Header*/
+  header .container .flex-contain {
+    padding: 0;
+    align-items: center;
+  }
+  header .container .flex-contain .logo img {
+    width: 100%;
+  }
+  header .container .flex-contain .login {
+    display: none;
+  }
   header .container .flex-contain .nav-menu {
     order: 3;
     --open: inline-block;
@@ -376,6 +400,9 @@ footer .flex-footer .img-footer img {
     color: white;
     font-size: 1.5rem;
   }
+  header .container .flex-contain .nav-menu .main-menu li button {
+    display: inline;
+  }
 
   /*Home*/
   .home {
@@ -387,8 +414,8 @@ footer .flex-footer .img-footer img {
   }
 
   .flex-home .home-cta {
-    background: #8080803b;
-    padding: 10% 0;
+    background: #0075ff24;
+    padding: 10% 5%;
   }
   .flex-home .home-cta h2 {
     line-height: 3rem;

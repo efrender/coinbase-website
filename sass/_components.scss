@@ -24,6 +24,10 @@ $blac10: rgba(0, 0, 0, 1);
         height: 1.72rem;
     }
 }
+.btn-main-toggle{
+    @extend .btn-main;
+    background-color: cornflowerblue;
+}
 .btn-sec{
     @include btn-base();
     background-color: transparent;
@@ -33,6 +37,10 @@ $blac10: rgba(0, 0, 0, 1);
     &:hover{
         color: $color-main;
     }  
+}
+.btn-sec-toggle{
+    @extend .btn-sec;
+    background-color:forestgreen;
 }
 .icon-sm{
     display: flex;
