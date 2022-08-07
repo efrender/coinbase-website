@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0 1 30%;
+  flex: 0 1 20rem;
 }
 .benefits .description h3 {
   font-family: "Inter", sans-serif;
@@ -116,6 +116,9 @@ header .container .flex-contain .logo {
 header .container .flex-contain .nav-menu {
   display: flex;
 }
+header .container .flex-contain .nav-menu .toggle {
+  display: none;
+}
 header .container .flex-contain .nav-menu .main-menu {
   display: flex;
   justify-content: center;
@@ -128,6 +131,7 @@ header .container .flex-contain .nav-menu .main-menu li {
 }
 header .container .flex-contain .nav-menu .main-menu li a {
   color: #212529;
+  font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   text-decoration: none;
@@ -162,8 +166,8 @@ section {
 .flex-home .home-cta h2 {
   font-family: "Inter", sans-serif;
   color: #212529;
-  font-size: 2.8rem;
-  font-size: clamp(2.8rem, 2.59rem + 1.0500000000000003vw, 3.85rem);
+  font-size: 2.2rem;
+  font-size: clamp(2.2rem, 1.87rem + 1.6500000000000001vw, 3.85rem);
   font-weight: 500;
   line-height: 4.25rem;
 }
@@ -266,6 +270,7 @@ section {
 }
 .onboarding .onboarding-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
@@ -277,6 +282,7 @@ section {
   color: #0075FF;
   font-size: 5rem;
   line-height: 1rem;
+  width: 100%;
 }
 .onboarding .onboarding-icons .get-start-icons h4 {
   font-size: 1rem;
@@ -323,6 +329,110 @@ footer .flex-footer .img-footer {
 }
 footer .flex-footer .img-footer img {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  /*Header*/
+  header .container .flex-contain .nav-menu {
+    order: 3;
+    --open: inline-block;
+    --close: none;
+    --transform-menu: translateX(100%);
+  }
+  header .container .flex-contain .nav-menu:target {
+    --open: none;
+    --close: inline-block;
+    --transform-menu: translateX(0);
+  }
+  header .container .flex-contain .nav-menu .toggle {
+    display: inline-block;
+    z-index: 110;
+  }
+  header .container .flex-contain .nav-menu .toggle a i {
+    font-size: 2rem;
+  }
+  header .container .flex-contain .nav-menu .toggle #toggle-open {
+    display: var(--open);
+    color: #0075FF;
+    transition: 0.8s all;
+  }
+  header .container .flex-contain .nav-menu .toggle #toggle-close {
+    color: white;
+    display: var(--close);
+    transition: 0.8s all;
+  }
+  header .container .flex-contain .nav-menu .main-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background: #0075FF;
+    width: 100vw;
+    height: 100vh;
+    transform: var(--transform-menu);
+    z-index: 100;
+  }
+  header .container .flex-contain .nav-menu .main-menu li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  /*Home*/
+  .home {
+    background-image: url("../assets/img/home.jpg"), linear-gradient(to bottom, #0d6efd, #7d8efe, #b1b1fe, #dbd7ff, #ffffff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    background-blend-mode: screen;
+  }
+
+  .flex-home .home-cta {
+    background: #8080803b;
+    padding: 10% 0;
+  }
+  .flex-home .home-cta h2 {
+    line-height: 3rem;
+    font-weight: bold;
+  }
+  .flex-home .form input[type=email] {
+    width: 90%;
+    margin-bottom: 2%;
+  }
+  .flex-home .home-img {
+    display: none;
+  }
+
+  /*Benefits*/
+  .benefits .description .cta {
+    position: relative;
+    bottom: -20px;
+  }
+
+  /*Onboarding*/
+  .onboarding .onboarding-icons .get-start-icons {
+    flex: 0 1 20rem;
+  }
+
+  /*Footer*/
+  footer .flex-footer {
+    background-image: url("../assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  footer .flex-footer .text-footer {
+    width: 100%;
+    flex: 0 1 90%;
+    background: #b2d9d920;
+  }
+  footer .flex-footer .text-footer .texts {
+    width: 100%;
+  }
+  footer .flex-footer .text-footer .texts p {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  footer .img-footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
